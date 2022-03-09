@@ -16,6 +16,9 @@ public interface ArtistDAO extends JpaRepository<Artist, Integer> {
     public List<Artist> findAll();
 
     public Artist findByUsername(String username);
+
+    public Artist findByArtistId(Integer artistId);
+
 //    @Query("FROM drawing ")
 //    public List<Drawing> findAllDrawings(Artist artist);
 }

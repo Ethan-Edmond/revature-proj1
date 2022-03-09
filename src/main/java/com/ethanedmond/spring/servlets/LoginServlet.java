@@ -32,8 +32,6 @@ public class LoginServlet extends HttpServlet {
         Integer userId = artist.getArtistId();
         HttpSession sesh = req.getSession();
         sesh.setAttribute("userId", userId);
-        RequestDispatcher rd = req.getRequestDispatcher("studies");
-        rd.forward(req, res);
-        System.out.println("login called with: " + sesh.getAttribute("userId"));
+        res.sendRedirect("studies");
     }
 }

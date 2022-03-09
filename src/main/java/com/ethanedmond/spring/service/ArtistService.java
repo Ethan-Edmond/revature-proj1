@@ -16,13 +16,17 @@ public class ArtistService {
         this.dao = dao;
     }
 
-    public Artist save(Artist user) {
-        return dao.save(user);
+    public Artist save(Artist artist) {
+        return this.dao.save(artist);
     }
 
     public List<Artist> findAll() {
-        return dao.findAll();
+        return this.dao.findAll();
     }
 
-    public Artist findByUsername(String username) { return dao.findByUsername(username); }
+    public Artist findByUsername(String username) { return this.dao.findByUsername(username); }
+
+    public Artist findByArtistId(Integer artistId) {
+        return this.dao.findByArtistId(artistId);
+    }
 }
