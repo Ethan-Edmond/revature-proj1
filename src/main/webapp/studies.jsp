@@ -9,7 +9,7 @@
 <body>
     <h3>All Studies</h3>
     <a href="/myStudies">Your Studies</a>
-    <a href="/addStudy">Create a new Study</a>
+    <a href="/addStudy">Create a New Study</a>
     <a href="/myDrawings">Your Drawings</a>
     <ul>
         <c:forEach var="study" items="${allStudies}">

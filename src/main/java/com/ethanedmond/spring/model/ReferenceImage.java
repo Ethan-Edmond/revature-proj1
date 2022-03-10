@@ -14,4 +14,28 @@ public class ReferenceImage {
 
     @Column
     private String imageLink;
+
+    public int getReferenceImageId() {
+        return referenceImageId;
+    }
+
+    public void setReferenceImageId(int referenceImageId) {
+        this.referenceImageId = referenceImageId;
+    }
+
+    public Study getStudy() {
+        return study;
+    }
+
+    public void setStudy(Study study) {
+        this.study = study;
+    }
+
+    public String getImageLink() {
+        return imageLink;
+    }
+
+    public void setImageLink(String imageLink) {
+        this.imageLink = imageLink;
+    }
 }

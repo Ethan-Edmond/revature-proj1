@@ -1,7 +1,7 @@
 package com.ethanedmond.spring.servlets;
 
-import com.ethanedmond.spring.service.StudyService;
-import com.ethanedmond.spring.stubs.StudiesStub;
+import com.ethanedmond.spring.model.Drawing;
+import com.ethanedmond.spring.service.DrawingService;
 import com.ethanedmond.spring.utils.HttpUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 
@@ -13,23 +13,21 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
+import java.util.List;
 
-@WebServlet(urlPatterns = "/studies")
-public class StudiesServlet extends HttpServlet {
+@WebServlet(urlPatterns = "/myDrawings")
+public class MyDrawingsServlet extends HttpServlet {
     @Autowired
-    StudyService studyService;
+    DrawingService drawingService;
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         HttpSession sesh = HttpUtils.RedirectOnNoSesh(req, resp);
         if (sesh != null) {
-            StudiesStub[] stubs = studyService.findAll()
-                    .stream()
-                    .map(StudiesStub::new)
-                    .toArray(StudiesStub[]::new); // TODO maybe put this stuff in the service layer
-
-            req.setAttribute("allStudies", stubs);
-            RequestDispatcher view = req.getRequestDispatcher("studies.jsp");
+            int artistId = (int) sesh.getAttribute("userId");
+            List<Drawing> myDrawings = drawingService.getByArtistId(artistId);
+            req.setAttribute("myDrawings", myDrawings);
+            RequestDispatcher view = req.getRequestDispatcher("myDrawings.jsp");
             view.forward(req, resp);
         }
     }

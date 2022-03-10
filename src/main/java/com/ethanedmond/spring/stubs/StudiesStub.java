@@ -2,16 +2,14 @@ package com.ethanedmond.spring.stubs;
 
 import com.ethanedmond.spring.model.Study;
 
-public class StudyStub {
-    private int studyId; // TODO change all Integers to ints or vice versa, just choose one
-    private int artistId;
+public class StudiesStub {
+    private int studyId;
     private String title;
     private int totalDifficulty;
     private int difficultyVotes;
 
-    public StudyStub(Study toStub) {
+    public StudiesStub(Study toStub) {
         this.studyId = toStub.getStudyId();
-        this.artistId = toStub.getOwner().getArtistId();
         this.title = toStub.getTitle();
         this.totalDifficulty = toStub.getTotalDifficulty();
         this.difficultyVotes = toStub.getDifficultyVotes();
@@ -23,14 +21,6 @@ public class StudyStub {
 
     public void setStudyId(int studyId) {
         this.studyId = studyId;
-    }
-
-    public int getArtistId() {
-        return artistId;
-    }
-
-    public void setArtistId(int artistId) {
-        this.artistId = artistId;
     }
 
     public String getTitle() {

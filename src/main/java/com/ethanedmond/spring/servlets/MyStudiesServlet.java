@@ -1,9 +1,8 @@
 package com.ethanedmond.spring.servlets;
 
 import com.ethanedmond.spring.service.StudyService;
-import com.ethanedmond.spring.stubs.StudyStub;
+import com.ethanedmond.spring.stubs.StudiesStub;
 import com.ethanedmond.spring.utils.HttpUtils;
-import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import javax.servlet.RequestDispatcher;
@@ -25,10 +24,10 @@ public class MyStudiesServlet extends HttpServlet {
         HttpSession sesh = HttpUtils.RedirectOnNoSesh(req, resp);
         if (sesh != null) {
             int userId = (int) sesh.getAttribute("userId"); // TODO change all instances to artistId or userId. just choose one
-            StudyStub[] stubs = studyService.getByArtistId(userId)
+            StudiesStub[] stubs = studyService.getByArtistId(userId)
                     .stream()
-                    .map(StudyStub::new)
-                    .toArray(StudyStub[]::new); // TODO maybe put this stuff in the service layer
+                    .map(StudiesStub::new)
+                    .toArray(StudiesStub[]::new); // TODO maybe put this stuff in the service layer
             req.setAttribute("myStudies", stubs);
             RequestDispatcher view = req.getRequestDispatcher("myStudies.jsp");
             view.forward(req, resp);

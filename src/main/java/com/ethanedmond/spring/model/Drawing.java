@@ -18,4 +18,38 @@ public class Drawing {
 
     @Column
     private String imageLink;
+
+    public Drawing() { }
+
+    public int getDrawingId() {
+        return drawingId;
+    }
+
+    public void setDrawingId(int drawingId) {
+        this.drawingId = drawingId;
+    }
+
+    public Artist getArtist() {
+        return artist;
+    }
+
+    public void setArtist(Artist artist) {
+        this.artist = artist;
+    }
+
+    public Study getStudy() {
+        return study;
+    }
+
+    public void setStudy(Study study) {
+        this.study = study;
+    }
+
+    public String getImageLink() {
+        return imageLink;
+    }
+
+    public void setImageLink(String imageLink) {
+        this.imageLink = imageLink;
+    }
 }

@@ -85,4 +85,9 @@ public class Study {
     public void setDifficultyVotes(int difficultyVotes) {
         this.difficultyVotes = difficultyVotes;
     }
+
+    public void addDifficulty(int difficultyRating) {
+        this.totalDifficulty += difficultyRating;
+        this.difficultyVotes++;
+    }
 }
