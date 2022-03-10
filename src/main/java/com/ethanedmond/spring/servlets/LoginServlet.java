@@ -3,7 +3,6 @@ package com.ethanedmond.spring.servlets;
 import com.ethanedmond.spring.model.Artist;
 import com.ethanedmond.spring.service.ArtistService;
 import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import javax.servlet.annotation.WebServlet;
@@ -29,7 +28,7 @@ public class LoginServlet extends HttpServlet {
         Integer userId = artist.getArtistId();
         HttpSession sesh = req.getSession();
         sesh.setAttribute("userId", userId);
-        LogManager.getLogger().info("User: " + username + " has logged in");
+        LogManager.getLogger().info("AAAAAA!");
         System.out.println("should have logged");
         res.sendRedirect("myStudies");
     }
