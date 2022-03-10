@@ -1,4 +1,5 @@
 application.properties
 log4j.properties
 imageServer.properties
+src/main/webapp/images/*
 target
