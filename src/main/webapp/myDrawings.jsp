@@ -12,6 +12,10 @@
         <c:forEach var="drawing" items="${myDrawings}">
             <li>
                 <img src="${drawing.getImageLink()}"/>
+                <form action="deleteDrawing" method="post">
+                    <input type="hidden" name="drawingId" value="${drawing.getDrawingId()}"/>
+                    <input type="submit" value="Delete"/>
+                </form>
             </li>
         </c:forEach>
     </ul>

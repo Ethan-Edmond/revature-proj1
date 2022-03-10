@@ -18,6 +18,8 @@ public interface DrawingDAO extends JpaRepository<Drawing, Integer> {
 
     @Query("SELECT d FROM Drawing d WHERE d.artist.artistId = :artistId")
     public List<Drawing> getByArtistId(int artistId);
+
+    public void deleteByDrawingId(int drawingId);
 //    public List<Drawing> findByArtistID(int artistId);
 //
 //    public List<Drawing> findByStudyId(int studyId);

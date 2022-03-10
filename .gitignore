@@ -3,3 +3,4 @@ log4j.properties
 imageServer.properties
 src/main/webapp/images/*
 target
+log4jlogger.log

@@ -27,4 +27,8 @@ public class DrawingService {
     public List<Drawing> getByArtistId(int artistId) {
         return this.dao.getByArtistId(artistId);
     }
+
+    public void deleteByDrawingId(int drawingId) {
+        this.dao.deleteByDrawingId(drawingId);
+    }
 }
