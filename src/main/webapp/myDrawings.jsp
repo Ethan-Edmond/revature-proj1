@@ -4,20 +4,29 @@
 <head>
     <meta charset="UTF-8">
     <title>Your Drawings</title>
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <h3>Your Drawings</h3>
-    <a href="/myStudies">Back to Your Studies</a>
-    <ul>
-        <c:forEach var="drawing" items="${myDrawings}">
-            <li>
-                <img src="${drawing.getImageLink()}"/>
-                <form action="deleteDrawing" method="post">
-                    <input type="hidden" name="drawingId" value="${drawing.getDrawingId()}"/>
-                    <input type="submit" value="Delete"/>
-                </form>
-            </li>
-        </c:forEach>
-    </ul>
+    <header class="clean">
+        <h3>Your Drawings</h3>
+        <nav>
+            <a href="/myStudies">Your Studies</a>
+            <a href="/studies">All Studies</a>
+            <a href="/addStudy">Add a Study</a>
+        </nav>
+    </header>
+    <main class="drawingContainer">
+        <ul>
+            <c:forEach var="drawing" items="${myDrawings}">
+                <li class="drawingCard">
+                    <img src="${drawing.getImageLink()}"/>
+                    <form action="deleteDrawing" method="post">
+                        <input type="hidden" name="drawingId" value="${drawing.getDrawingId()}"/>
+                        <input class="submit" type="submit" value="Delete"/>
+                    </form>
+                </li>
+            </c:forEach>
+        </ul>
+    </main>
 </body>
 </html>

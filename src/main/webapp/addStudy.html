@@ -3,12 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <title>Add a new Study</title>
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <h3>Add a Study</h3>
-    <form method="post" action="addStudy">
-        <input type="text" name="title"/>
-        <input type="submit" value="Submit"/>
-    </form>
+    <header class="clean">
+        <h3>Add a Study</h3>
+        <nav>
+            <a href="/myStudies">Your Studies</a>
+            <a href="/studies">All Studies</a>
+            <a href="/myDrawings">Your Drawings</a>
+        </nav>
+    </header>
+    <main class="centered withHeader">
+        <div class="clean inCenter">
+            <form method="post" action="addStudy">
+                <input class="addTitle field" type="text" name="title" placeholder="Enter a title for your new study!"/>
+                <input class="submit" type="submit" value="Submit"/>
+            </form>
+        </div>
+    </main>
 </body>
 </html>

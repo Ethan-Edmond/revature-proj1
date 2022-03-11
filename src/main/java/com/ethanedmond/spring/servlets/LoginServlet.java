@@ -28,7 +28,7 @@ public class LoginServlet extends HttpServlet {
         Integer userId = artist.getArtistId();
         HttpSession sesh = req.getSession();
         sesh.setAttribute("userId", userId);
-        LogManager.getLogger().info("AAAAAA!");
+        LogManager.getLogger().info("AAA");
         System.out.println("should have logged");
         res.sendRedirect("myStudies");
     }

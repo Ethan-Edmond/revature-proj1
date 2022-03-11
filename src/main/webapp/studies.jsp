@@ -5,21 +5,28 @@
 <head>
     <meta charset="UTF-8">
     <title>All Art Studies</title>
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <h3>All Studies</h3>
-    <a href="/myStudies">Your Studies</a>
-    <a href="/addStudy">Create a New Study</a>
-    <a href="/myDrawings">Your Drawings</a>
-    <ul>
-        <c:forEach var="study" items="${allStudies}">
-            <li>
-              <a href="/study?studyId=${study.getStudyId()}">
-                <strong>${study.getTitle()}:</strong>
-                ${study.difficultyString()} difficulty
-              </a>
-            </li>
-        </c:forEach>
-    </ul>
+    <header class="clean">
+        <h3>All Studies</h3>
+        <nav>
+            <a href="/myStudies">Your Studies</a>
+            <a href="/addStudy">Add a Study</a>
+            <a href="/myDrawings">Your Drawings</a>
+        </nav>
+    </header>
+    <main class="centered withHeader">
+        <div class="clean inCenter">
+            <ul>
+                <c:forEach var="study" items="${allStudies}">
+                    <li>
+                        <a href="/study?studyId=${study.getStudyId()}">${study.getTitle()}</a>
+                        ${study.difficultyString()} difficulty
+                    </li>
+                </c:forEach>
+            </ul>
+        </div>
+    </main>
 </body>
 </html>

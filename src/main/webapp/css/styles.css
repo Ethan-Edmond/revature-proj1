@@ -1,0 +1,232 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-image: url("../assets/paul-blenkhorn-1.webp");
+    background-size: cover;
+}
+
+.centered {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.centered.withHeader {
+    margin-top: -3.8rem;
+    padding-top: 3.8rem;
+}
+
+.clean {
+    display: flex;
+    background: #f4f4f4;
+    padding: 1.2rem;
+    box-shadow: 0.05rem 0.1rem 0.2rem #44444466;
+}
+
+.clean.inCenter {
+    flex-direction: column;
+    align-items: center;
+    border-radius: 0.2rem;
+}
+
+.clean h3 {
+    margin: 0 0 1rem;
+    color: #3b3b3b;
+    font-weight: 400;
+}
+
+header.clean {
+    justify-content: space-around;
+}
+
+header.clean h3 {
+    margin: 0;
+}
+
+nav {
+    padding-top: 0.1rem;
+}
+
+a {
+    text-decoration: underline;
+    padding: 0 1rem;
+    color: #3b3b3b;
+    text-decoration-color: #ffdd00ff;
+}
+
+.submit {
+    color: #404040;
+    font-family: serif;
+    border: outset 2px white;
+    background: #f8f8f8;
+    padding: 0.1rem 0.6rem;
+    border-radius: 0.2rem;
+}
+
+::placeholder {
+    color: #383838;
+    text-decoration: underline;
+    text-decoration-color: #ffdd00ff;
+}
+
+.field {
+    font-family: serif;
+    background: #f0f0f0;
+    border: inset 2px white;
+    padding: 0.1rem 0.6rem;
+    border-radius: 0.2rem;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    overflow: auto;
+}
+
+li {
+    list-style: none;
+}
+
+img {
+    width: 100%;
+    border-radius: 0.2rem;
+}
+
+.drawingCard {
+    list-style: none;
+    padding: 1rem;
+    background: #f4f4f4;
+    margin: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 0.2rem;
+}
+
+.drawingCard .submit {
+    margin-top: 1rem;
+}
+
+.addTitle {
+    min-width: 12.2rem;
+}
+
+.study {
+    margin: 1rem;
+    background: #f4f4f4;
+    padding: 1rem;
+    border-radius: 0.2rem;
+}
+
+.difficulty {
+    display: flex;
+    justify-content: start;
+    margin: 0 0 1rem;
+    align-items: center;
+}
+
+.difficulty p {
+    margin-right: 1rem;
+}
+
+.difficulty form {
+    display: flex;
+    align-items: center;
+}
+
+.difficulty .submit {
+    margin-left: 1rem;
+}
+
+.tags {
+    display: flex;
+    margin-bottom: 1rem;
+    align-items: center;
+}
+
+.tags ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.tags li {
+    margin: 0 0.5rem;
+    font-style: italic;
+}
+
+.tags form {
+    display: flex;
+    align-items: center;
+}
+
+.tags .field {
+    margin: 0 0.2rem;
+}
+
+.references ul {
+    display: flex;
+    flex-wrap: wrap
+}
+
+.references li {
+    width: 50%;
+    padding: 0.5rem;
+}
+
+.references form {
+    margin: 0.5rem;
+    display: flex;
+    align-items: center;
+}
+
+.fileUpload {
+    color: #3b3b3b;
+    font-family: serif;
+}
+
+::file-selector-button {
+    font-family: serif;
+    background: #f0f0f0;
+    border: inset 2px white;
+    padding: 0.1rem 0.6rem;
+    border-radius: 0.2rem;
+    text-decoration: underline;
+    text-decoration-color: #ffdd00ff;
+    color: #383838;
+}
+
+.drawings ul {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.drawings li {
+    width: 50%;
+    padding: 0.5rem;
+}
+
+.drawings a {
+    margin: 0.5rem;
+    padding: 0;
+}
+
+.drawNav {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
+}
+
+main.drawingCard .submit {
+    margin-top: 0;
+}
+
